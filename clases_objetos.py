@@ -50,17 +50,3 @@ class Celular:
 celular1 = Celular("Samsung","s24","33MB")
 print(celular1.llamar())  # cortaste la llamada
 
-#PRACTICA
-
-class Estudiante():
-  def __init__ (self,nombre,edad,grado):
-    self.nombre = nombre
-    self.edad = edad
-    self.grado = grado
-    
-  def estudiar(self):
-    print(f"El estudiante {self.nombre} esta estudiando, tiene {self.edad} de edad y cursa el {self.grado} grado")
-
-
-est = Estudiante("Carlos","34","3er")
-est.estudiar()
