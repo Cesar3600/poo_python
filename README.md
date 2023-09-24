@@ -222,14 +222,16 @@ is_instance = isinstance(empleado,EmpleadoArtista)
 print(is_instance)
 ```
 
->[issubclass]
+>[!NOTE]
+>**issubclass**
 >sirve para saber si una clase es subclase de otra
 >```py
 >is_subclase = issubclass(EmpleadoArtista,Persona)
 >print(is_subclase)
 >```
 
->[isinstance]
+>[!NOTE]
+>**isinstance**
 >Devuelve un booleano si un objeto es una instancia de una clase
 >```py
 >is_instance = isinstance(empleado,EmpleadoArtista)
