@@ -1,5 +1,5 @@
 
-# POO CON PYTHON
+# **POO CON PYTHON**
 
 ## **CONCEPTO**
 
@@ -29,7 +29,7 @@ print(cel1)
 
 
 ```
-### instancia de una clase
+### **instancia de una clase**
  basicamente es objeto
 
 ## **ATRIBUTOS**
@@ -176,7 +176,7 @@ print(student_data.student_msg())
 
 ```
 
-### HERENCIA MULTIPLE
+### **HERENCIA MULTIPLE**
 
 
 ```py
@@ -237,4 +237,184 @@ print(is_instance)
 >is_instance = isinstance(empleado,EmpleadoArtista)
 >print(is_instance)
 >```
+
+### **MRO** 
+(method resolution order)
+Es el orden en el que python busca metodos y atributos en las clases
+
+>[!NOTE]
+> Puedes usar el metodo mro() para saber el orden de ejecucion 
+> mro()
+
+
+
+### **POLIMORFISMO**
+muchas formas
+un objeto puede cambisar de forma dependiendo del contexto del que se utilice
+
+
+Es cuando le damos un metodo a un objeto este se comporte diferente entendiendo que sus propiedades son diferentes.
+
+existen varios tipos de polimorfismo
+
+en el ejemplo abajo, el polimorfismo esta en el uso de un mismo metodo que vive en diferentes clases.
+
+```py
+class Gato:
+  def sonido(self):
+    return 'miau'
+  
+class Perro:
+  def sonido(self):
+    return 'guauuu'    
+
+#aplicando polimorfismo
+gato = Gato()
+perro = Perro()
+
+print(gato.sonido()) #miau
+print(perro.sonido()) #guau
+```
+
+### POLIMORFISMO DE FUNCION
+cambia el parametro (perro o gato)
+
+```py
+def hacer_sonido(animal):
+  print(animal.sonido())
+
+hacer_sonido(gato)  #miauu
+hacer_sonido(perro) #guau
+
+```
+
+### POLIMORFISMO DE SUBCLASE
+
+>[!WARNING]
+> estudiar sobre:
+> 1. duck typing
+> 2. Enlaces dinamicos 
+> 3. Enlaces Estaticos
+> 4. tipo real
+> 5. tipo declarado
+>
+
+FALTA
+
+
+## **ENCAPSULAMIENTO**
+en si no existe en python
+consiste en proteger elementos de una clase
+pueden ser privbadoos o publicos
+
+
+### **ATRIBUTO PRIVADO**
+tiene un _
+```py
+#atributo privado
+class MiClase:
+  def __init__(self):
+    self._atributo_privado = "valores"
+
+objeto = MiClase()
+
+print(objeto._atributo_privado)
+
+```
+
+### **ATRIBUTO MUY PRIVADO**
+tienen doble __
+```py
+class MiClase:
+  def __init__(self):
+    self.__atributo_muy_privado = "valores"
+    
+objeto = MiClase()
+
+print(objeto._atributo_muy_privado)
+```
+
+## **SETTERS Y GETTERS**
+sirve para acceder o modificar atributos privados o muy privados.
+
+### **GETTERS**
+```py
+#getter
+class Persona:
+  def __init__(self,nombre,edad):
+    self.__nombre = nombre
+    self.__edad = edad
+  
+  def get_nombre(self):
+    return self.__nombre
+
+  def get_edad(self):
+    return self.__edad
+
+
+dalto = Persona("Lucas",21)
+
+nombre = dalto.get_nombre()
+edad = dalto.get_edad()
+
+print(f'soy {nombre} y tengo {edad} de edad')
+```
+
+### **SETTERS**
+```py
+#setters
+class Persona:
+  def __init__(self,nombre,edad):
+    self.__nombre = nombre
+    self.__edad = edad
+  
+  def get_nombre(self):
+    return self.__nombre
+
+  def get_edad(self):
+    return self.__edad
+
+  def set_nombre(self,nombre):
+    self.__nombre = nombre
+
+  def set_edad(self,edad):
+    self.__edad = edad
+
+
+persona = Persona("Cesar",21)
+
+persona.set_nombre('Arthur')
+nombre = persona.get_nombre()
+edad = persona.get_edad()
+
+print(f'soy {nombre} y tengo {edad} de edad')
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

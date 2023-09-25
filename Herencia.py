@@ -1,4 +1,5 @@
 
+#herencia y herencia multiple
 
 class Persona:
   def __init__(self,nombre,edad,nacionalidad):
